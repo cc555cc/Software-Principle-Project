@@ -140,6 +140,7 @@ fieldset {
   color: rgb(207, 207, 207);
 }
 #event-overview-name,
+#event-overview-date,
 #event-overview-time,
 #event-overview-description {
   color: rgb(207, 207, 207);
