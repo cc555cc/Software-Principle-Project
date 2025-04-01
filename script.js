@@ -542,11 +542,12 @@ function printAllEvent() {
 
       //put the date info inside a divison and add that division into the overview section//
       content = [ ["event-overview-name","name: " + event.name ],
+                  ["event-overview-date","Date: " + event.eventYear + "/" + event.eventMonth + "/" + event.eventDay],
                   ["event-overview-time","Time: " + event.startTime + " - " + event.endTime],
                   ["event-overview-description","Description: " + event.description]
                 ];
 
-      for(let i = 0; i < 3;i++){
+      for(let i = 0; i < 4;i++){
         const eventInfo = document.createElement("p");
         eventInfo.id = content[i][0];
         eventInfo.textContent = content[i][1];
