@@ -1,0 +1,14 @@
+This application runs on browser only and stores data using local memory.
+
+Features of the application includes:
+1. navigate through date with arrows or date picker, which would change the display of the calendar accordingly
+2. add a new booking after clicking on a valid date cell
+3. view all the booking on a selected date in the section next to new booking form
+4. edit selected event on the same section
+5. cancel edit
+6. save the edited booking
+7. delete a selected event
+8. view all the bookings in the nav bar by clicking on the top-right corner icon
+9. change application's section's color by clicking on customization in the navigation bar.
+
+Diagrams for this project is saved in the Diagrams file in case screenshot in report is not clear

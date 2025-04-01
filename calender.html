@@ -1,0 +1,80 @@
+<!Doctype html>
+<html>
+<head>
+	<title>My Calender App</title>
+	<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+	<p style="width: 35%"><input type="date" id="datepicker"><button id="JumpButton" onclick=getDate()>Jump To</button></p>
+	<div id="menuIcon" onclick="navControl()">&#9776;</div>
+
+	<div id="mySidenav" class="sidenav" >
+		<span id="navButtonContainer"><button id="OverviewButton" onClick="printAllEvent()">Overview</button><button id="customizeButton" onClick="customizePanel()" >Customize</button>
+			</span>
+		<div id="navDisplay" onclick="navControl()"></div>
+		<div id="customizePanel" style="display: none"></div>
+	</div>
+
+	<div id="calendarContainer">
+		<table style="border: 2px solid black; background-color: blue" id="calendar" value="yes">
+		<script></script>
+		<caption  class="captionContent"><span id="year">year</span></caption>
+		<caption class="captionContent"><input type="image" id="leftArrow" src="leftArrow.png" onclick="previousMonth()"><span id="month">Month</span><input type="image" id="rightArrow" src="rightArrow.png" onclick="nextMonth()"></caption>
+		<tr>
+			<td id="day">Sunday</td>
+			<td id="day">Monday</td>
+			<td id="day">Tuesday</td>
+			<td id="day">Wednesday</td>
+			<td id="day">Thursday</td>
+			<td id="day">Friday</td>
+			<td id="day">Saturday</td>
+		</tr>
+		<script src="script.js"></script>
+		</table>
+	</div>
+
+	<br>
+
+	<div id="operation-section">
+		<div id="addEvent" style="display: block">
+			<form>
+				<fieldset>
+					<legend>Add an event:</legend>
+					<p id="name-input">
+						Name:<input type="text" id="eventName" required title="please enter your reasoning here">
+					</p>
+					<p id="time-input" style="display: flex">
+
+						Time:<input id="event-start-time" type="time"> - <input id="event-end-time" type="time">
+					</p>
+					<p id="detail-input">
+						Detail: <textarea id="eventDescription"></textarea>
+					</p>
+					<input type="submit" value="Add event" id="addEventButton">
+				</fieldset>
+			</form>
+		</div>
+		<div id="checkEvent" >
+		</div>
+		
+	</div>
+
+	<div id="date-detail" style="display: none">
+		<h1 class="date-detail" id="description" ></h1>
+		<div id="date-display" style="display: none">
+			<h1 class="date-detail" id="date-detail-year"></h1>
+			<h1 class="date-detail" id="date-detail-month"></h1>
+			<h1 class="date-detail" id="date-detail-day"></h1>
+		</div>
+		
+	</div>
+
+
+	<script>
+    document.getElementById('addEventButton').addEventListener('click', function(event){
+    	createEvent(event)});
+		DOMloadColor();
+	</script>
+</body>
+</html>
